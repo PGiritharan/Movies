@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Poster correctly 1`] = `
+<div
+  className="content-container"
+>
+  <div
+    className="modal"
+    id="detailsCard"
+  >
+    <div
+      className="modal-content"
+    >
+      <div
+        className="modal-header"
+      >
+        <div
+          className="box-layout__title"
+        >
+          test moive 1-1983
+        </div>
+      </div>
+      <p>
+        Test sysnopsis of the movie
+      </p>
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,15 @@
+{
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "setupFiles":[
+      "<rootDir>/src/setupTests.js"
+    ],
+    "collectCoverageFrom":[
+        "src/**/*.js", "!src/index.js"
+    ],
+    "coverageReporters": [
+        "text"
+    ]
+  }
+  

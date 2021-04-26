@@ -1,0 +1,88 @@
+.box-layout{
+    align-items: center;
+    background: url('/images/bg.jpg');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.box-layout__box{
+    background: fade-out($color: white, $amount: .15);
+    border-radius: 3px;
+    padding: $l-size $m-size;
+    text-align: center;
+    width: 25rem;
+    /* Portrait and Landscape */
+    @media only screen 
+    and (min-device-width: $small-mobile-breakpoint-min) 
+    and (max-device-width: $small-mobile-breakpoint-max) {
+        background: fade-out($color: white, $amount: .15);
+        border-radius: 3px;
+    }
+    /* Portrait */
+    @media only screen 
+    and (min-device-width: $small-mobile-breakpoint-min) 
+    and (max-device-width: $small-mobile-breakpoint-max)
+    and (orientation: portrait) {
+        padding: $s-size $m-size;
+        text-align: center;
+        width: 20rem;
+        height: 20rem;
+    }
+    /* Landscape */
+    @media only screen 
+    and (min-device-width: $small-mobile-breakpoint-min) 
+    and (max-device-width: $small-mobile-breakpoint-max)
+    and (orientation: landscape) {
+    }
+}
+
+.box-layout__title{
+    margin: 0 0 $m-size 0;
+    line-height: 1;
+    font-size: 5rem;
+    /* Portrait and Landscape */
+    @media only screen 
+    and (min-device-width: $small-mobile-breakpoint-min) 
+    and (max-device-width: $small-mobile-breakpoint-max) {
+        margin: 0 0 0 0;
+        line-height: 1;
+    }
+    /* Portrait */
+    @media only screen 
+    and (min-device-width: $small-mobile-breakpoint-min) 
+    and (max-device-width: $small-mobile-breakpoint-max)
+    and (orientation: portrait) {
+        font-size: 2rem;
+    }
+    /* Landscape */
+    @media only screen 
+    and (min-device-width: $small-mobile-breakpoint-min) 
+    and (max-device-width: $small-mobile-breakpoint-max)
+    and (orientation: landscape) {
+    }
+}
+
+.box-layout__sub-title{
+    /* Portrait and Landscape */
+    @media only screen 
+    and (min-device-width: $small-mobile-breakpoint-min) 
+    and (max-device-width: $small-mobile-breakpoint-max) {
+        margin-block-end: 1rem;
+        margin-block-start: 1rem;
+    }
+    /* Portrait */
+    @media only screen 
+    and (min-device-width: $small-mobile-breakpoint-min) 
+    and (max-device-width: $small-mobile-breakpoint-max)
+    and (orientation: portrait) {
+    }
+    /* Landscape */
+    @media only screen 
+    and (min-device-width: $small-mobile-breakpoint-min) 
+    and (max-device-width: $small-mobile-breakpoint-max)
+    and (orientation: landscape) {
+    }
+}

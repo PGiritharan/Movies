@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Poster correctly 1`] = `
+<div
+  className="poster"
+>
+  <img
+    alt=""
+    className="poster-img"
+    loading="lazy"
+    onClick={[Function]}
+    src="testurl.jpg"
+  />
+</div>
+`;

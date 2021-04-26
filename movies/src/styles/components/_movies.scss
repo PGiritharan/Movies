@@ -1,0 +1,172 @@
+.content-container__poster{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 1%;
+    & > *{
+        /* Landscape */
+        @media only screen 
+        and (min-device-width: $small-mobile-breakpoint-min) 
+        and (max-device-width: $small-mobile-breakpoint-max)
+        and (orientation: landscape) {
+        }
+
+        @media only screen 
+        and (min-device-width: $mobile-breakpoint-min) 
+        and (max-device-width: $mobile-breakpoint-max)
+        and (orientation: landscape) {
+            flex: 1 1 25%;
+        }
+    }
+
+    /* Portrait and Landscape */
+    @media only screen 
+    and (min-device-width: $small-mobile-breakpoint-min) 
+    and (max-device-width: $small-mobile-breakpoint-max) {
+        display: flex;
+        align-items: center;
+    }
+    /* Portrait */
+    @media only screen 
+    and (min-device-width: $small-mobile-breakpoint-min) 
+    and (max-device-width: $small-mobile-breakpoint-max)
+    and (orientation: portrait) {
+        flex-flow: column;
+    }
+    /* Landscape */
+    @media only screen 
+    and (min-device-width: $small-mobile-breakpoint-min) 
+    and (max-device-width: $small-mobile-breakpoint-max)
+    and (orientation: landscape) {
+        flex-flow: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* Portrait and Landscape */
+    @media only screen 
+    and (min-device-width: $mobile-breakpoint-min) 
+    and (max-device-width: $mobile-breakpoint-max) {
+        display: flex;
+        align-items: center;
+    }
+    /* Portrait */
+    @media only screen 
+    and (min-device-width: $mobile-breakpoint-min) 
+    and (max-device-width: $mobile-breakpoint-max)
+    and (orientation: portrait) {
+        flex-flow: column;
+    }
+    /* Landscape */
+    @media only screen 
+    and (min-device-width: $mobile-breakpoint-min) 
+    and (max-device-width: $mobile-breakpoint-max)
+    and (orientation: landscape) {
+        flex-flow: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+.poster {
+    width: 35rem;
+    height: 50rem;
+    cursor: pointer;
+    /* Portrait and Landscape */
+    @media only screen 
+    and (min-device-width: $small-mobile-breakpoint-min) 
+    and (max-device-width: $small-mobile-breakpoint-max) {
+    }
+    /* Portrait */
+    @media only screen 
+    and (min-device-width: $small-mobile-breakpoint-min) 
+    and (max-device-width: $small-mobile-breakpoint-max)
+    and (orientation: portrait) {
+        width: 24rem;
+        height: 24rem;
+    }
+    /* Landscape */
+    @media only screen 
+    and (min-device-width: $small-mobile-breakpoint-min) 
+    and (max-device-width: $small-mobile-breakpoint-max)
+    and (orientation: landscape) {
+        width:14rem;
+    }
+
+    /* Portrait and Landscape */
+    @media only screen 
+    and (min-device-width: $mobile-breakpoint-min) 
+    and (max-device-width: $mobile-breakpoint-max) {
+    }
+    /* Portrait */
+    @media only screen 
+    and (min-device-width: $mobile-breakpoint-min) 
+    and (max-device-width: $mobile-breakpoint-max)
+    and (orientation: portrait) {
+        width: 36rem;
+    }
+    /* Landscape */
+    @media only screen 
+    and (min-device-width: $mobile-breakpoint-min) 
+    and (max-device-width: $mobile-breakpoint-max)
+    and (orientation: landscape) {
+        width: 25rem;
+        height: 25rem;
+    }
+}
+
+.poster-img {
+    width: 35rem;
+    height: 50rem;
+    padding: 2rem;
+    /* Portrait and Landscape */
+    @media only screen 
+    and (min-device-width: $small-mobile-breakpoint-min) 
+    and (max-device-width: $small-mobile-breakpoint-max) {
+    }
+    /* Portrait */
+    @media only screen 
+    and (min-device-width: $small-mobile-breakpoint-min) 
+    and (max-device-width: $small-mobile-breakpoint-max)
+    and (orientation: portrait) {
+        width: 24rem;
+        height: 24rem;
+        padding: 1.6rem;
+    }
+    /* Landscape */
+    @media only screen 
+    and (min-device-width: $small-mobile-breakpoint-min) 
+    and (max-device-width: $small-mobile-breakpoint-max)
+    and (orientation: landscape) {
+        width: 14rem;
+        height: 16rem;
+        padding: 1.6rem;
+    }
+    /* Portrait and Landscape */
+    @media only screen 
+    and (min-device-width: $mobile-breakpoint-min) 
+    and (max-device-width: $mobile-breakpoint-max) {
+    }
+    /* Portrait */
+    @media only screen 
+    and (min-device-width: $mobile-breakpoint-min) 
+    and (max-device-width: $mobile-breakpoint-max)
+    and (orientation: portrait) {
+        width: 36rem;
+        padding: 1.6rem;
+    }
+    /* Landscape */
+    @media only screen 
+    and (min-device-width: $mobile-breakpoint-min) 
+    and (max-device-width: $mobile-breakpoint-max)
+    and (orientation: landscape) {
+        width: 25rem;
+        height: 25rem;
+        padding: 1.6rem;
+    }
+}
+
+.sort-button-container {
+    display: flex;
+    flex-direction: row;
+}

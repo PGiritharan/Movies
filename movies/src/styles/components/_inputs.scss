@@ -1,0 +1,74 @@
+.text-input{
+    border: 1px solid #cacccd;
+    font-size: $font-size-large;
+    font-weight: 300;
+    height: $l-size;
+    padding: $s-size;
+}
+
+.select{
+    @extend .text-input;
+}
+
+.textarea{
+    @extend .text-input;
+    height: 10rem;
+}
+
+.box-layout__text-input{
+    @extend .text-input;
+    /* Portrait and Landscape */
+    @media only screen 
+    and (min-device-width: $small-mobile-breakpoint-min) 
+    and (max-device-width: $small-mobile-breakpoint-max) {
+        font-weight: normal;
+        font-size: $font-size-small;
+        height: 1.8rem;
+    }
+    /* Portrait */
+    @media only screen 
+    and (min-device-width: $small-mobile-breakpoint-min) 
+    and (max-device-width: $small-mobile-breakpoint-max)
+    and (orientation: portrait) {
+    }
+    /* Landscape */
+    @media only screen 
+    and (min-device-width: $small-mobile-breakpoint-min) 
+    and (max-device-width: $small-mobile-breakpoint-max)
+    and (orientation: landscape) {
+    }
+}
+
+// Poster Filters
+.filter-container {
+    padding: 0;
+    list-style: none;
+    display: flex;
+
+    & > .filter-item {
+        color: wheat;
+        width: max-content;
+        height: 50px;
+        font-size: 2rem;
+        text-align: center;
+        padding: 25px;
+        display: inherit;
+        align-items: baseline;
+
+        & > label {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+          }
+        & >  input {
+            margin-right: 1rem;
+            cursor: pointer;
+          }
+      }
+  }
+  .longhand {
+    flex-flow: row;
+  }
+  
