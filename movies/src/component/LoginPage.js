@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import api from '../services/API';
 import { login } from '../actions/auth';
+import { authenticate } from '../services/auth';
 
 export class LoginPage extends React.Component {
     constructor(props) {
@@ -21,16 +22,17 @@ export class LoginPage extends React.Component {
         this.setState(() => ({ password }));
     }
 
-    onSubmit = (e) => {
+    onSubmit = async (e) => {
         e.preventDefault();
         if (!this.state.username || !this.state.password) {
             this.setState(() => ({ error: 'Please provide username and password.' }));
         } else {
             this.setState(() => ({ error: '' }));
-            api.post('http://localhost:3030/users/login', {
-                username: this.state.username,
-                password: this.state.password
-            }).then((response)=>{
+            try{
+                const response = await authenticate('users/login', {
+                    username: this.state.username,
+                    password: this.state.password
+                });
                 if(response.error){
                     const error=response.error
                     return this.setState(() => ({ error }));
@@ -38,9 +40,9 @@ export class LoginPage extends React.Component {
                 this.props.login(response.token);
                 sessionStorage.setItem('token',response.token)
                 window.location.href='/'
-            }).catch((error)=>{
+            }catch(error){
                 console.log(error)
-            })
+            }
         }
     }
 

@@ -1,12 +1,13 @@
-import React, { useEffect, useLayoutEffect, useState } from 'react';
-import { connect } from 'react-redux';
+import React, { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { startLogin, startLogout } from '../actions/auth'
 
 export const Header=(props)=>{
     const history = useHistory();
-    const [isHeader, setHeader] = useState(true)
+    const [isHeader, setHeader] = useState(true);
+    const isLoggedIn = useSelector((state)=>!!state.auth.uid);
 
     useEffect(()=>{
         return history.listen((location) => { 
@@ -25,7 +26,7 @@ export const Header=(props)=>{
                     <h1>Movies</h1>
                 </Link>
                 {
-                    props.isLoggedIn ? (
+                    isLoggedIn ? (
                         <button className="button button--link" onClick={startLogout}>Logout</button>
                     ) : (
                         <button className="button button--link" onClick={startLogin}>Login</button>
@@ -36,13 +37,4 @@ export const Header=(props)=>{
     </header>): null)
 }
 
-const mapStateToProps = (state) => ({
-    isLoggedIn: state.auth.uid
-});
-
-const mapDispatchToProps = (dispatch)=>({
-    startLogin: ()=>dispatch(startLogin()),
-    startLogout: ()=>dispatch(startLogout())
-})
-
-export default connect(mapStateToProps, mapDispatchToProps)(Header);
+export default Header;

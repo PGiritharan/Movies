@@ -3,7 +3,7 @@ export default (state = {}, action)=>{
         case 'SET_MOVIES':
             return {
                 ...state,
-                movies: action.movies
+                moviesList: action.movies
             };
         case 'SET_SORT_ORDER':
             return {
